@@ -19,6 +19,7 @@ if args.datain == 'data/1.in':
     n = x0.shape[0]
     x_ones = np.ones((n, 1))
     x = np.hstack((x0, x_ones))
+    x[:,[0,2]] = x[:,[2,0]]
     y = np.genfromtxt(args.datain, usecols=(2))
 
 else:
@@ -26,6 +27,7 @@ else:
     n = x0.shape[0]
     x_ones = np.ones((n, 1))
     x = np.hstack((x0, x_ones))
+    x[:,[0,4]] = x[:,[4,0]]
     y = np.genfromtxt(args.datain, usecols=(4))
     
 # Analytic Solution
